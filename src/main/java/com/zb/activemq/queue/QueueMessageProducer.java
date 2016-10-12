@@ -39,7 +39,7 @@ public class QueueMessageProducer {
     public void sendQueueMessage(PersonInfo personInfo) {
         // getJmsTemplate().convertAndSend(personInfo);//如果配置文件中指定了目的地，可以使用这句话发送消息。
         
-        System.out.println("QueueMessageProducer 消息生产者开始发送消息...");
+        System.out.println("点对点 QueueMessageProducer 消息生产者开始发送消息...");
         
         //目的地、模版，都是通过注入方式引入，并不是通过配置bean的方式引入.
         getJmsTemplate().convertAndSend(this.defaultDestination, personInfo);
