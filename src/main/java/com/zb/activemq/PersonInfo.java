@@ -1,0 +1,52 @@
+package com.zb.activemq;
+
+import java.io.Serializable;
+
+/**
+ * 实体bean
+ * 
+ * 作者: gavin.cfm 
+ * 日期：2015年9月28日 上午10:11:33
+ */
+public class PersonInfo implements Serializable {
+
+    private static final long serialVersionUID = 789949814642878355L;
+
+    private String userName;
+    private String address;
+    private String pwd;
+
+    public PersonInfo(){}
+    
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonInfo [userName=" + userName + ", address=" + address
+                + ", pwd=" + pwd + "]";
+    }
+
+    
+}
